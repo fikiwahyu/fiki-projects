@@ -1,0 +1,38 @@
+.fikipedia-logo {
+    height: 40px;
+}
+
+.content {
+    height: 9.5rem;
+    overflow: auto;
+    transition: all 1s ease;
+}
+
+.content::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.content::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form-container {
+    padding: 1rem;
+}
+
+.form-container .form-label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bolder;
+}
