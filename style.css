@@ -2,6 +2,13 @@
     height: 40px;
 }
 
+.bg-nextdev {
+    background-image: url(/assets/logo-digitalent.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 1rem);
+}
+
 .content {
     height: 9.5rem;
     overflow: auto;
