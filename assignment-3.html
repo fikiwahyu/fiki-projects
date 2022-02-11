@@ -37,7 +37,7 @@
 </head>
 
 <body class="pb-5">
-    <header class="p-3 mb-3 border-bottom">
+    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb;">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -113,12 +113,9 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="new-case" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="new-case" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">New Case</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -127,12 +124,9 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="active-case" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="active-case" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">Active Case</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -141,12 +135,9 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="recovered" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="recovered" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">Recovered</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
@@ -155,12 +146,9 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="death-case" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="death-case" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">Death</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
@@ -169,12 +157,9 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="total-test" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="total-test" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">Total test</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mt-3">
@@ -183,12 +168,16 @@
                                         <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <div id="total-case" class="card-text text-center fw-bold h1">0</div>
+                                        <div id="total-case" class="card-text text-center fw-bold h2">0</div>
                                         <p class="card-text text-center fw-bold">Total Case</p>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        2 days ago
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert alert-secondary mt-3" role="alert">
+                                    <strong> Assignment-3</strong> <br>
+                                    Waspada <strong> Covid-19</strong> , Tetap Patuhi protokol kesehatan dan pastikan
+                                    memakai masker :)
                                 </div>
                             </div>
                         </div>
@@ -237,12 +226,18 @@
                 .then(response =>
                     response.json()
                 ).then(response => {
-                    newcase.innerHTML = response.response[0].cases.new;
-                    activecase.innerHTML = response.response[0].cases.active;
-                    recovered.innerHTML = response.response[0].cases.recovered;
-                    totaldeath.innerHTML = response.response[0].deaths.total;
-                    totaltest.innerHTML = response.response[0].tests.total;
-                    totalcase.innerHTML = response.response[0].cases.total;
+                    response.response[0].cases.new ?
+                        newcase.innerHTML = response.response[0].cases.new : newcase.innerHTML = 0;
+                    response.response[0].cases.active ?
+                        activecase.innerHTML = response.response[0].cases.active : activecase.innerHTML = 0;
+                    response.response[0].cases.recovered ?
+                        recovered.innerHTML = response.response[0].cases.recovered : recovered.innerHTML = 0;
+                    response.response[0].deaths.total ?
+                        totaldeath.innerHTML = response.response[0].deaths.total : totaldeath.innerHTML = 0;
+                    response.response[0].tests.total ?
+                        totaltest.innerHTML = response.response[0].tests.total : totaltest.innerHTML = 0;
+                    response.response[0].cases.total ?
+                        totalcase.innerHTML = response.response[0].cases.total : totalcase.innerHTML = 0;
                 })
                 .catch(err => {
                     console.error(err);
