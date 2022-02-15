@@ -186,23 +186,50 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <h2 class="h1 fw-bold">
+            Historical Data
+        </h2>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        <div id="chart">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-2">
+                    <img src="/assets/hacktiv8.png" class="img-fluid rounded-start" alt="...">
+                </div> -->
+            </div>
+        </div>
+
+
+    </div>
     <!-- javascript bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <!-- chart for dataview -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
         searchData();
         var selectcountry = document.getElementById("select-country");
         selectcountry.addEventListener("change", detectCountry);
+        selectcountry.addEventListener("change", detecthistory);
 
         function detectCountry() {
-            var country = document.getElementById("select-country").value;
-            var newcase = document.getElementById("new-case");
-            var activecase = document.getElementById("active-case");
-            var recovered = document.getElementById("recovered");
-            var totaldeath = document.getElementById("death-case");
-            var totaltest = document.getElementById("total-test");
-            var totalcase = document.getElementById("total-case");
+            const country = document.getElementById("select-country").value;
+            const newcase = document.getElementById("new-case");
+            const activecase = document.getElementById("active-case");
+            const recovered = document.getElementById("recovered");
+            const totaldeath = document.getElementById("death-case");
+            const totaltest = document.getElementById("total-test");
+            const totalcase = document.getElementById("total-case");
 
             const loading = `<button class="btn btn-secondary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -244,6 +271,55 @@
                 });
         }
 
+        function detecthistory() {
+            let country = document.getElementById("select-country").value;
+            // const datetime = new Date();
+            // let year = datetime.getFullYear();
+            // let month;
+            // let date;
+            // if ((datetime.getMonth() + 1) < 10) {
+            //     month = "0" + (datetime.getMonth() + 1);
+            // } else {
+            //     month = (datetime.getMonth() + 1);
+            // }
+            // if (datetime.getDate() < 10) {
+            //     date = "0" + datetime.getDate();
+            // } else {
+            //     date = datetime.getDate();
+            // }
+            // var fulldate = `${year}-${month}-${date}`
+            fetch(`https://covid-193.p.rapidapi.com/history?country=${country}`, {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-host": "covid-193.p.rapidapi.com",
+                        "x-rapidapi-key": "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9"
+                    }
+                })
+                .then(response => response.json())
+                .then(response => {
+                    var datalabels = [];
+                    var covidcases = [];
+                    var arraydata = response.response.reverse();
+                    var tempcategories = arraydata[0].day;
+                    for (let i = 1; i < arraydata.length; i++) {
+                        if (arraydata[i].day == arraydata[i - 1].day) {
+                            datalabels.pop();
+                            datalabels.push(arraydata[i].day);
+                            covidcases.pop();
+                            covidcases.push(arraydata[i].cases.total)
+                        } else {
+                            datalabels.push(arraydata[i].day);
+                            covidcases.push(arraydata[i].cases.total)
+                        }
+                    }
+                    document.getElementById("chart").innerHTML = "";
+                    getgraphic("chart", country, datalabels, covidcases);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        }
+
         function searchData() {
             fetch("https://covid-193.p.rapidapi.com/countries", {
                     "method": "GET",
@@ -262,6 +338,49 @@
                 .catch(err => {
                     console.error(err);
                 });
+        }
+
+        // function untuk menampilkan grafik
+        var getgraphic = function (iddom, country, dataLabels, data1) {
+
+            var options = {
+                series: [{
+                    name: "Total Covid cases",
+                    data: data1
+                }],
+                chart: {
+                    type: 'area',
+                    height: 350,
+                    zoom: {
+                        enabled: false
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    curve: 'straight'
+                },
+
+                title: {
+                    text: `Covid cases in ${country}`,
+                    align: 'left'
+                },
+                labels: dataLabels,
+                xaxis: {
+                    type: 'datetime',
+                },
+                yaxis: {
+                    opposite: true
+                },
+                legend: {
+                    horizontalAlign: 'left'
+                }
+            };
+
+
+            var chart = new ApexCharts(document.getElementById(iddom), options);
+            chart.render();
         }
     </script>
 </body>
