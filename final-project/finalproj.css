@@ -62,7 +62,100 @@
     width: -webkit-fill-available;
 }
 
+.section.head {
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+}
+
+.section.head img {
+    width: 100%;
+    position: absolute;
+    filter: grayscale(1) blur(2px);
+}
+
 /* end bootstrap custom style */
+
+/* custom card for About Us */
+.ficard-container {
+    width: 420px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation: float 3s ease infinite;
+}
+
+.ficard-container .ficard-header {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ficard-header .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.ficard-body {
+    position: relative;
+    padding: 1rem;
+}
+
+.ficard-body .bodycaption {
+    margin-top: 68px;
+}
+
+.ficard-body .profile-photo {
+    width: 120px;
+    height: 120px;
+    left: calc(50% - 60px);
+    transform: rotate(45deg);
+    justify-self: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    top: -60px;
+}
+
+.profile-photo img {
+    width: 150%;
+    transform: rotate(-45deg) translate(20px, -50px);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.ficard-footer {
+    padding: 4px 1rem 4px;
+}
+
+.ficard-attr {
+    display: flex;
+    flex-direction: row;
+    padding: .25rem .5rem .5rem;
+    width: fit-content;
+    gap: 1rem;
+    border-bottom-left-radius: 5px;
+    background: #21352f;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 100;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate();
+    }
+
+    50% {
+        transform: translate(10px, 10px);
+    }
+}
+
+/* end custom card */
 .apps {
     transition: all .5s ease-in-out;
 }
