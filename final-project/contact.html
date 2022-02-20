@@ -57,10 +57,11 @@
                                 class=" text-dark nav-link">About
                                 Us</a></li>
                         <li class="nav-item"><a href="/final-project/contact.html" id="contactlink"
-                                class=" text-dark nav-link">Contact</a></li>
+                                class=" text-dark nav-link active">Contact</a></li>
                         <li class="nav-item"><a href="/final-project/toDos.html" id="todolink"
-                                class=" text-dark nav-link active">ToDos</a>
+                                class=" text-dark nav-link">ToDos</a>
                         </li>
+
                     </ul>
                 </div>
 
@@ -88,92 +89,48 @@
     </div>
     <div class="section my-5">
         <div class="container col-xxl-8">
-            <h1 class="fw-bold text-center">To Do App</h1>
-            <div class="row flex-row card" style="overflow: hidden;">
-                <div class="col-md-7 p-0">
-                    <img src="/assets/final-project/dummy4.jpg" class="w-100" style="height: 100%;" alt="">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe height="500" style="width: 100%;" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=mojokerto&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <!-- <a href="https://www.embedgooglemap.net">using google map on website</a> -->
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-5">
-                    <h1 class="h1 fw-bold text-center py-2">Todo List</h1>
-                    <button class="btn btn-primary w-100" id="toogle" type="button" onfocus="click()"
-                        data-bs-toggle="collapse" data-bs-target="#todoform" aria-expanded="false"
-                        aria-controls="todoform">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-card-checklist" viewBox="0 0 16 16">
-                            <path
-                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                            <path
-                                d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
-                        </svg>
-                    </button>
-                    <div class="collapse" id="todoform">
-                        <form class="row mb-3 g-3 needs-validation" id="todoform" novalidate action="#toogle">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="form-agenda" placeholder="Agenda"
-                                        required>
-                                    <input type="time" class="form-control" id="form-waktu" placeholder="Time" required>
-                                </div>
-
+                <div class="col-md-6">
+                    <h1 class="h1 position-relative fw-bold text-center my-3">Keep In Touch</h1>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-12">
+                            <label for="form-nama" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="form-nama" placeholder="Nama" required>
+                            <div class="invalid-feedback">
+                                *kolom harus diisi
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="form-email" class="form-label">Last name</label>
+                            <input type="email" class="form-control" id="form-email" placeholder="halo@gmail.com"
+                                required>
+                            <div class="invalid-feedback">
+                                *kolom harus diisi
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="form-comment" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <textarea type="text" class="form-control" rows="4" id="form-comment"
+                                    aria-describedby="inputGroupPrepend" required></textarea>
                                 <div class="invalid-feedback">
-                                    *kolom harus diisi
+                                    Please Give Us a Comment
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="input-group has-validation">
-                                    <textarea type="text" class="form-control" rows="4" id="form-desc"
-                                        aria-describedby="inputGroupPrepend" placeholder="Description"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary float-end" id="todo-sbmt" type="submit">Submit
-                                    form</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="todo-section" id="todo-section">
-                        <!-- <div class="card mt-3">
-                            <div class="card-body todo-container">
-                                <div class="todo-group">
-                                    <div class="todo-title fw-bold h6">
-                                        Makan
-                                    </div>
-                                    <div class="todo-datetime">
-                                        18:02
-                                    </div>
-                                </div>
-                                <div class="todo-desc">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore saepe eos ducimus
-                                    doloremque
-                                </div>
-                                <div class="todo-btn">
-                                    <div class="todo-group gap-3">
-                                        <div class="btn btn-sm w-50 btn-outline-danger"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                                <path fill-rule="evenodd"
-                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                            </svg> Delete</div>
-                                        <div class="btn btn-sm w-50 btn-outline-success"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
-                                                <path
-                                                    d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                            </svg> Done</div>
-                                    </div>
-                                </div>
-                                <div class="todo-stats">
-                                    <span class="spinner-grow spinner-grow-sm" style="height: 10px; width:10px;"
-                                        role="status" aria-hidden="true"></span>
-                                    ongoing
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -217,6 +174,31 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // validation
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
     <script src="finalproj.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

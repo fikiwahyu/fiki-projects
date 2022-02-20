@@ -156,6 +156,46 @@
 }
 
 /* end custom card */
+
+/* custom card for todos apps */
+.todo-container {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.todo-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-desc {
+    height: 0;
+    overflow: auto;
+    transition: all .5s ease-in;
+    font-size: 10px;
+}
+
+.todo-container:hover>.todo-desc {
+    height: 3rem;
+}
+
+.todo-datetime {
+    width: auto;
+}
+
+.todo-stats {
+    position: absolute;
+    background-color: #888;
+    border-bottom-left-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: end;
+    padding: 0 1rem .25rem;
+    top: 0;
+    right: 0;
+}
+
+/* end custom card */
 .apps {
     transition: all .5s ease-in-out;
 }
