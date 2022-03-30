@@ -43,3 +43,15 @@
     width: 150px;
     font-weight: bolder;
 }
+
+.bg-electrical {
+    background: linear-gradient(to right, rgb(33, 37, 41) 50%, rgba(255, 255, 0, 0)), url("/assets/bg-electrical.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-bank {
+    background: linear-gradient(to right, rgb(33, 37, 41) 50%, rgba(255, 255, 0, 0)), url("/assets/bg-bank.jpg");
+    background-size: cover;
+    background-position: center;
+}

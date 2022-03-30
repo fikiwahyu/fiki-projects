@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/square-logo.png">
+    <link rel="icon" type="image/png" href="/assets/square-logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>NextDev Academy 2022</title>
+</head>
+
+<body class="pb-5" style="background-color: #f8f8f8;">
+    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb;">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img class="fikipedia-logo" src="../assets/square-logo.png" alt="Logo Fikipedia">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-bold">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Dashboard</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Assignment
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/assignment-1.html">assignment-1</a></li>
+                                <li><a class="dropdown-item" href="/assignment-2.html">assignment-2</a></li>
+                                <li><a class="dropdown-item" href="/assignment-3.html">assignment-3</a></li>
+                                <li><a class="dropdown-item" href="/final-project/index.html">Final Project</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg" alt="Hacktiv8"
+                            width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
+                        style="background-attachment: fixed;">
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="intro">
+        <div class="container">
+            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark bg-bank">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 fw-bold">Bank Credits Approval</h1>
+                    <p>The data is related with direct marketing campaigns of a Portuguese banking institution. The
+                        marketing campaigns were based on phone calls. Often, more than one contact to the same client
+                        was required, in order to access if the product (bank term deposit) would be ('yes') or not
+                        ('no') subscribed. </p>
+                    <p class="collapse multi-collapse my-3" id="readmore">
+                        Applikasi ini akan mengelola hasil dari parameter-parameter input yang telah diisi menjadi
+                        sebuah keputusan yang berisi persetujuan/penolakan dari pengajuan credits
+                        <br>
+                        <br>
+                        <!-- <b>Dataset ini mempunyai beberapa parameter input, antara lain:</b><br> -->
+                    </p>
+
+                    <p class="lead mb-0">
+                        <button class="btn p-0 text-white fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target=".multi-collapse" aria-expanded="false"
+                            aria-controls="readmore readmore2">Continue reading...</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form-app">
+        <div class="container">
+            <div class="row mb-3">
+                <h2 class="col-12 h3 fw-bold text-center my-3">Bank client Data</h2>
+                <div class="col-md-3 mb-3">
+                    <label for="age" class="form-label fw-bolder">age</label>
+                    <input type="number" class="form-control" id="age" placeholder="17">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="job" class="form-label fw-bolder">Job</label>
+                    <div class="input-group">
+                        <select type="number" class="form-control" id="job">
+                            <option selected>Select Option</option>
+                            <option value="0">Admin</option>
+                            <option value="1">Blue-collar</option>
+                            <option value="2">Entrepeneur</option>
+                            <option value="3">Housemaid</option>
+                            <option value="4">Management</option>
+                            <option value="5">Retired</option>
+                            <option value="6">Self-employed</option>
+                            <option value="7">Services</option>
+                            <option value="8">Student</option>
+                            <option value="9">Technician</option>
+                            <option value="10">Unemployed</option>
+                            <option value="11">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="marital" class="form-label fw-bolder">Marital</label>
+                    <div class="input-group">
+                        <select type="number" class="form-control" id="marital">
+                            <option selected>Select Option</option>
+                            <option value="0">Divorced</option>
+                            <option value="1">Married</option>
+                            <option value="2">Single</option>
+                            <option value="3">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="education" class="form-label fw-bolder">education</label>
+                    <div class="input-group">
+                        <select class="form-control" id="education">
+                            <option selected>Select Option</option>
+                            <option value="0">Basic.4y</option>
+                            <option value="1">Basic.6y</option>
+                            <option value="2">Basic.9y</option>
+                            <option value="3">HighSchool</option>
+                            <option value="4">Illiterate</option>
+                            <option value="5">Professional Course</option>
+                            <option value="6">University Degree</option>
+                            <option value="7">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="default" class="form-label fw-bolder">Default</label>
+                    <div class="input-group">
+                        <select class="form-control" id="default">
+                            <option selected>Select Option</option>
+                            <option value="0">No</option>
+                            <option value="1">Unknown</option>
+                            <option value="2">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="housing" class="form-label fw-bolder">Housing</label>
+                    <div class="input-group">
+                        <select class="form-control" id="housing">
+                            <option selected>Select Option</option>
+                            <option value="0">No</option>
+                            <option value="1">Unknown</option>
+                            <option value="2">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="loan" class="form-label fw-bolder">Loan</label>
+                    <div class="input-group">
+                        <select class="form-control" id="loan">
+                            <option selected>Select Option</option>
+                            <option value="0">No</option>
+                            <option value="1">Unknown</option>
+                            <option value="2">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <h2 class="col-12 h3 fw-bold text-center my-3">Last Contact</h2>
+
+                <div class="col-md-3 mb-3">
+                    <label for="contact" class="form-label fw-bolder">Contact</label>
+                    <select class="form-control" id="contact">
+                        <option selected>Select Option</option>
+                        <option value="0">Cellular</option>
+                        <option value="1">Telephone</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="c-month" class="form-label fw-bolder">Month</label>
+                    <div class="input-group">
+                        <select class="form-control" id="c-month">
+                            <option selected>Select Option</option>
+                            <option disabled>January</option>
+                            <option disabled>February</option>
+                            <option value="5">March</option>
+                            <option value="0">April</option>
+                            <option value="6">May</option>
+                            <option value="4">June</option>
+                            <option value="3">July</option>
+                            <option value="1">August</option>
+                            <option value="9">September</option>
+                            <option value="8">October</option>
+                            <option value="7">November</option>
+                            <option value="2">December</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="c-day" class="form-label fw-bolder">Day</label>
+                    <div class="input-group">
+                        <select class="form-control" id="c-day">
+                            <option selected>Select Option</option>
+                            <option disabled>Sunday</option>
+                            <option value="1">Monday</option>
+                            <option value="3">Tuesday</option>
+                            <option value="4">Wednesday</option>
+                            <option value="2">Thursday</option>
+                            <option value="0">Friday</option>
+                            <option disabled>Saturday</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="duration" class="form-label fw-bolder">Duration</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="duration" placeholder="10">
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <h2 class="col-12 h3 fw-bold text-center my-3">Other Attributes</h2>
+
+                <div class="col-md-3 mb-3">
+                    <label for="campaign" class="form-label fw-bolder">Campaign</label>
+                    <input type="number" class="form-control" id="campaign" placeholder="1">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="pdays" class="form-label fw-bolder">Pdays</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="pdays" placeholder="3">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="previous" class="form-label fw-bolder">Previous</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="previous" placeholder="1">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="poutcome" class="form-label fw-bolder">Poutcome</label>
+                    <div class="input-group">
+                        <select class="form-control" id="poutcome">
+                            <option selected>Select Option</option>
+                            <option value="0">Failure</option>
+                            <option value="1">Nonexistent</option>
+                            <option value="2">Success</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <h2 class="col-12 h3 fw-bold text-center my-3">Social and Economic context attributes</h2>
+
+                <div class="col-md-3 mb-3">
+                    <label for="empvarrate" class="form-label fw-bolder">emp.var.rate</label>
+                    <input type="number" class="form-control" id="empvarrate" placeholder="13">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="constpriceidx" class="form-label fw-bolder">Const.Price.idx</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="constpriceidx" placeholder="93">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="constconfidx" class="form-label fw-bolder">Const.conf.idx</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="constconfidx" placeholder="42">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="euribor3m" class="form-label fw-bolder">Euribor3m</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="euribor3m" placeholder="4">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="nrindicator" class="form-label fw-bolder">Nr.Employees</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="nrindicator" placeholder="5000">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <!-- <button type="button" id="generate" class="btn btn-outline-primary">Generate</button> -->
+                <button type="button" id="check-approval" class="btn btn-primary mx-3">Check approval</button>
+                <div class="form-control text-muted" id="approval-result" style="width: 30%;">Result...</div>
+            </div>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script>
+        var precission2 = (numb) => {
+            return (Math.floor(numb * 100)) / 100
+        }
+
+        // document.getElementById("generate").addEventListener("click", generate)
+        document.getElementById("check-approval").addEventListener("click", C_approval)
+
+        function generate() {
+            datetm = document.getElementById("datetm");
+            gap = document.getElementById("gap");
+            grp = document.getElementById("grp");
+            voltage = document.getElementById("voltage");
+            gi = document.getElementById("gi");
+            sm1 = document.getElementById("sm1");
+            sm2 = document.getElementById("sm2");
+            sm3 = document.getElementById("sm3");
+
+            now = new Date()
+            datetm.value =
+                `${("0" + now.getDay()).slice(-2)}/${("0" + now.getMonth()).slice(-2)}/${now.getFullYear()} ${("0" + now.getHours()).slice(-2)}:${("0" + now.getMinutes()).slice(-2)}:${("0" + now.getSeconds()).slice(-2)}`;
+            gap.value = precission2(Math.random() * 11.1);
+            grp.value = precission2(Math.random() * 1.39);
+            voltage.value = Math.floor(Math.random() * (254 - 223)) + 223;
+            gi.value = precission2(Math.random() * 48.4);
+            // sm1.value = Math.random();
+            // sm2.value = Math.random();
+            // sm3.value = Math.random();
+        }
+
+
+        function C_approval() {
+            age = document.getElementById("age");
+            job = document.getElementById("job");
+            marital = document.getElementById("marital");
+            education = document.getElementById("education");
+            fdefault = document.getElementById("default");
+            housing = document.getElementById("housing");
+            loan = document.getElementById("loan");
+
+            contact = document.getElementById("contact");
+            cmonth = document.getElementById("c-month");
+            cdays = document.getElementById("c-day");
+            cduration = document.getElementById("duration");
+
+            campaign = document.getElementById("campaign");
+            pdays = document.getElementById("pdays");
+            previous = document.getElementById("previous");
+            poutcome = document.getElementById("poutcome");
+
+            empvarrate = document.getElementById("empvarrate");
+            constpriceidx = document.getElementById("constpriceidx");
+            constconfidx = document.getElementById("constconfidx");
+            euribor3m = document.getElementById("euribor3m");
+            nrindicatior = document.getElementById("nrindicator");
+
+            approval_result = document.getElementById("approval-result");
+            approval_result.innerHTML =
+                `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>  Loading...`;
+
+            fetch(`https://fiki-kmeans-clustering.herokuapp.com/checkapproval?age=${age.value}&job=${job.value}&marital=${marital.value}&education=${education.value}&default=${fdefault.value}&housing=${housing.value}&loan=${loan.value}&contact=${contact.value}&month=${cmonth.value}&day_of_week=${cdays.value}&duration=${cduration.value}&campaign=${campaign.value}&pdays=${pdays.value}&previous=${previous.value}&poutcome=${poutcome.value}&empvarrate=${empvarrate.value}&conspriceidx=${constpriceidx.value}&consconfidx=${constconfidx.value}&euribor3m=${euribor3m.value}&nremployed=${nrindicatior.value}`
+                    // , {
+                    //         "method": "GET",
+                    //         "data": {
+                    //             "global_active_power": gap.value,
+                    //             "global_reactive_power": grp.value,
+                    //             "voltage": voltage.value,
+                    //             "global_intensity": gi.value,
+                    //             "sub_metering_1": sm1.value,
+                    //             "sub_metering_2": sm2.value,
+                    //             "sub_metering_3": sm3.value,
+                    //         }
+                    //     }
+                )
+                .then(response =>
+                    response.json()
+                ).then(response =>
+                    // console.log(JSON.parse(response.res)[0])
+                    {
+                        app_array = ["Not Approved", "Approved"],
+                            document.getElementById("approval-result").innerHTML =
+                            `Result : ${app_array[JSON.parse(response.res)[0]]}`
+                    }
+                )
+                .catch(err => {
+                    console.error(err);
+                });
+        }
+
+        function clustering() {
+            gap = document.getElementById("gap");
+            grp = document.getElementById("grp");
+            voltage = document.getElementById("voltage");
+            gi = document.getElementById("gi");
+            sm1 = document.getElementById("sm1");
+            sm2 = document.getElementById("sm2");
+            sm3 = document.getElementById("sm3");
+            cluster_result = document.getElementById("cluster-result");
+            cluster_result.innerHTML =
+                `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>  Loading...`;
+
+            fetch(`https://fiki-kmeans-clustering.herokuapp.com/?global_active_power=${gap.value}&global_reactive_power=${grp.value}&voltage=${voltage.value}&global_intensity=${gi.value}&sub_metering_1=${sm1.value}&sub_metering_2=${sm2.value}&sub_metering_3=${sm3.value}`
+                    // , {
+                    //         "method": "GET",
+                    //         "data": {
+                    //             "global_active_power": gap.value,
+                    //             "global_reactive_power": grp.value,
+                    //             "voltage": voltage.value,
+                    //             "global_intensity": gi.value,
+                    //             "sub_metering_1": sm1.value,
+                    //             "sub_metering_2": sm2.value,
+                    //             "sub_metering_3": sm3.value,
+                    //         }
+                    //     }
+                )
+                .then(response =>
+                    response.json()
+                ).then(response =>
+                    // console.log(JSON.parse(response.res)[0])
+                    document.getElementById("cluster-result").innerHTML =
+                    `Cluster : ${JSON.parse(response.res)[0]}`
+                )
+                .catch(err => {
+                    console.error(err);
+                });
+        }
+    </script>
+</body>
+
+</html>
