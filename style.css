@@ -55,3 +55,9 @@
     background-size: cover;
     background-position: center;
 }
+
+.fi-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
