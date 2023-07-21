@@ -1,388 +1,519 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/square-logo.png">
-    <link rel="icon" type="image/png" href="/assets/square-logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/square-logo.png" />
+    <link rel="icon" type="image/png" href="/assets/square-logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-        name='viewport' />
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>NextDev Academy 2022</title>
 
     <style>
-        .height-12 {
-            height: 8px;
-            overflow: hidden;
-        }
+      .height-12 {
+        height: 8px;
+        overflow: hidden;
+      }
 
-        .cvd-img {
-            max-height: 500px;
-            overflow: hidden;
-            position: relative;
-        }
+      .cvd-img {
+        max-height: 500px;
+        overflow: hidden;
+        position: relative;
+      }
 
-        .nextdev {
-            position: absolute;
-            height: 80px;
-            top: 0;
-        }
+      .nextdev {
+        position: absolute;
+        height: 80px;
+        top: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body class="pb-5">
-    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb;">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                    <img class="fikipedia-logo" src="../assets/square-logo.png" alt="Logo Fikipedia">
-                </a>
+  <body class="pb-5">
+    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+          >
+            <img
+              class="fikipedia-logo"
+              src="../assets/square-logo.png"
+              alt="Logo Fikipedia"
+            />
+          </a>
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-secondary">Dashboard</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Assignment
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="/assignment-1.html">assignment-1</a></li>
-                                <li><a class="dropdown-item" href="/assignment-2.html">assignment-2</a></li>
-                                <li><a class="dropdown-item" href="/assignment-3.html">assignment-3</a></li>
-                                <li><a class="dropdown-item" href="/final-project/index.html">Final Project</a></li>
-                            </ul>
-                        </div>
-                    </li>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Dashboard</a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Assignment
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a class="dropdown-item" href="/assignment-1.html"
+                      >assignment-1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/assignment-2.html"
+                      >assignment-2</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/assignment-3.html"
+                      >assignment-3</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/final-project/index.html"
+                      >Final Project</a
+                    >
+                  </li>
                 </ul>
+              </div>
+            </li>
+          </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                </form>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
 
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg" alt="Hacktiv8"
-                            width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
-                        style="background-attachment: fixed;">
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg"
+                alt="Hacktiv8"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small"
+              aria-labelledby="dropdownUser1"
+              style="background-attachment: fixed"
+            >
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </header>
     <div class="container">
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-lg-4 d-md-none d-lg-block cvd-img">
-                    <img src="/assets/logo-digitalent.png" alt="Nextdev" class="nextdev">
-                    <img src="/assets/cvd-19.jpg" class="img-fluid rounded" alt="Covid 19">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-lg-4 d-md-none d-lg-block cvd-img">
+            <img
+              src="/assets/logo-digitalent.png"
+              alt="Nextdev"
+              class="nextdev"
+            />
+            <img
+              src="/assets/cvd-19.jpg"
+              class="img-fluid rounded"
+              alt="Covid 19"
+            />
+          </div>
+          <div class="col-lg-8">
+            <div class="card-body">
+              <h1 class="card-title h1 fw-bold" id="demo">Covid-19 Tracker</h1>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="select-country" class="form-control fw-bold"
+                    >Pilih Negara :</label
+                  >
                 </div>
-                <div class="col-lg-8">
-                    <div class="card-body">
-                        <h1 class="card-title h1 fw-bold" id="demo">Covid-19 Tracker</h1>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="select-country" class="form-control fw-bold">Pilih Negara :</label>
-                            </div>
-                            <div class="col-md-8">
-                                <select class="form-select" id="select-country" aria-label="Default select example">
-                                    <option selected>Select Country</option>
-                                </select>
-                            </div>
-
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="new-case" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">New Case</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="active-case" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">Active Case</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="recovered" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">Recovered</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-3">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="death-case" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">Death</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-3">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="total-test" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">Total test</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-3">
-                                <div class="card">
-                                    <div class="height-12">
-                                        <img src="/assets/covid-bg.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="total-case" class="card-text text-center fw-bold h2">0</div>
-                                        <p class="card-text text-center fw-bold">Total Case</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="alert alert-secondary mt-3" role="alert">
-                                    <strong> Assignment-3</strong> <br>
-                                    Waspada <strong> Covid-19</strong> , Tetap Patuhi protokol kesehatan dan pastikan
-                                    memakai masker :)
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-8">
+                  <select
+                    class="form-select"
+                    id="select-country"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Select Country</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
                     </div>
+                    <div class="card-body">
+                      <div
+                        id="new-case"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">New Case</p>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="active-case"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">Active Case</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="recovered"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">Recovered</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="death-case"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">Death</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="total-test"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">Total test</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                  <div class="card">
+                    <div class="height-12">
+                      <img
+                        src="/assets/covid-bg.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="total-case"
+                        class="card-text text-center fw-bold h2"
+                      >
+                        0
+                      </div>
+                      <p class="card-text text-center fw-bold">Total Case</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="alert alert-secondary mt-3" role="alert">
+                    <strong> Assignment-3</strong> <br />
+                    Waspada <strong> Covid-19</strong> , Tetap Patuhi protokol
+                    kesehatan dan pastikan memakai masker :)
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="container">
-        <h2 class="h1 fw-bold">
-            Historical Data
-        </h2>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="card-body">
-                        <!-- <h5 class="card-title">Card title</h5>
+      <h2 class="h1 fw-bold">Historical Data</h2>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                        <div id="chart">
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-2">
+              <div id="chart"></div>
+            </div>
+          </div>
+          <!-- <div class="col-md-2">
                     <img src="/assets/hacktiv8.png" class="img-fluid rounded-start" alt="...">
                 </div> -->
-            </div>
         </div>
-
-
+      </div>
     </div>
     <!-- javascript bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <!-- chart for dataview -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
-        searchData();
-        var selectcountry = document.getElementById("select-country");
-        selectcountry.addEventListener("change", detectCountry);
-        selectcountry.addEventListener("change", detecthistory);
+      searchData();
+      var selectcountry = document.getElementById("select-country");
+      selectcountry.addEventListener("change", detectCountry);
+      selectcountry.addEventListener("change", detecthistory);
 
-        function detectCountry() {
-            const country = document.getElementById("select-country").value;
-            const newcase = document.getElementById("new-case");
-            const activecase = document.getElementById("active-case");
-            const recovered = document.getElementById("recovered");
-            const totaldeath = document.getElementById("death-case");
-            const totaltest = document.getElementById("total-test");
-            const totalcase = document.getElementById("total-case");
+      function detectCountry() {
+        const country = document.getElementById("select-country").value;
+        const newcase = document.getElementById("new-case");
+        const activecase = document.getElementById("active-case");
+        const recovered = document.getElementById("recovered");
+        const totaldeath = document.getElementById("death-case");
+        const totaltest = document.getElementById("total-test");
+        const totalcase = document.getElementById("total-case");
 
-            const loading = `<button class="btn btn-secondary" type="button" disabled>
+        const loading = `<button class="btn btn-secondary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
   <span class="visually-hidden">Loading...</span>
-</button>`
+</button>`;
 
-            newcase.innerHTML = loading;
-            activecase.innerHTML = loading;
-            recovered.innerHTML = loading;
-            totaldeath.innerHTML = loading;
-            totaltest.innerHTML = loading;
-            totalcase.innerHTML = loading;
+        newcase.innerHTML = loading;
+        activecase.innerHTML = loading;
+        recovered.innerHTML = loading;
+        totaldeath.innerHTML = loading;
+        totaltest.innerHTML = loading;
+        totalcase.innerHTML = loading;
 
-            fetch(`https://covid-193.p.rapidapi.com/statistics?country=${country}`, {
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-                        "x-rapidapi-key": "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9"
-                    }
-                })
-                .then(response =>
-                    response.json()
-                ).then(response => {
-                    response.response[0].cases.new ?
-                        newcase.innerHTML = response.response[0].cases.new : newcase.innerHTML = 0;
-                    response.response[0].cases.active ?
-                        activecase.innerHTML = response.response[0].cases.active : activecase.innerHTML = 0;
-                    response.response[0].cases.recovered ?
-                        recovered.innerHTML = response.response[0].cases.recovered : recovered.innerHTML = 0;
-                    response.response[0].deaths.total ?
-                        totaldeath.innerHTML = response.response[0].deaths.total : totaldeath.innerHTML = 0;
-                    response.response[0].tests.total ?
-                        totaltest.innerHTML = response.response[0].tests.total : totaltest.innerHTML = 0;
-                    response.response[0].cases.total ?
-                        totalcase.innerHTML = response.response[0].cases.total : totalcase.innerHTML = 0;
-                })
-                .catch(err => {
-                    console.error(err);
-                });
-        }
+        fetch(
+          `https://covid-193.p.rapidapi.com/statistics?country=${country}`,
+          {
+            method: "GET",
+            headers: {
+              "x-rapidapi-host": "covid-193.p.rapidapi.com",
+              "x-rapidapi-key":
+                "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            response.response[0].cases.new
+              ? (newcase.innerHTML = response.response[0].cases.new)
+              : (newcase.innerHTML = 0);
+            response.response[0].cases.active
+              ? (activecase.innerHTML = response.response[0].cases.active)
+              : (activecase.innerHTML = 0);
+            response.response[0].cases.recovered
+              ? (recovered.innerHTML = response.response[0].cases.recovered)
+              : (recovered.innerHTML = 0);
+            response.response[0].deaths.total
+              ? (totaldeath.innerHTML = response.response[0].deaths.total)
+              : (totaldeath.innerHTML = 0);
+            response.response[0].tests.total
+              ? (totaltest.innerHTML = response.response[0].tests.total)
+              : (totaltest.innerHTML = 0);
+            response.response[0].cases.total
+              ? (totalcase.innerHTML = response.response[0].cases.total)
+              : (totalcase.innerHTML = 0);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      }
 
-        function detecthistory() {
-            let country = document.getElementById("select-country").value;
-            // const datetime = new Date();
-            // let year = datetime.getFullYear();
-            // let month;
-            // let date;
-            // if ((datetime.getMonth() + 1) < 10) {
-            //     month = "0" + (datetime.getMonth() + 1);
-            // } else {
-            //     month = (datetime.getMonth() + 1);
-            // }
-            // if (datetime.getDate() < 10) {
-            //     date = "0" + datetime.getDate();
-            // } else {
-            //     date = datetime.getDate();
-            // }
-            // var fulldate = `${year}-${month}-${date}`
-            fetch(`https://covid-193.p.rapidapi.com/history?country=${country}`, {
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-                        "x-rapidapi-key": "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9"
-                    }
-                })
-                .then(response => response.json())
-                .then(response => {
-                    var datalabels = [];
-                    var covidcases = [];
-                    var arraydata = response.response.reverse();
-                    var tempcategories = arraydata[0].day;
-                    for (let i = 1; i < arraydata.length; i++) {
-                        if (arraydata[i].day == arraydata[i - 1].day) {
-                            datalabels.pop();
-                            datalabels.push(arraydata[i].day);
-                            covidcases.pop();
-                            covidcases.push(arraydata[i].cases.total)
-                        } else {
-                            datalabels.push(arraydata[i].day);
-                            covidcases.push(arraydata[i].cases.total)
-                        }
-                    }
-                    document.getElementById("chart").innerHTML = "";
-                    getgraphic("chart", country, datalabels, covidcases);
-                })
-                .catch(err => {
-                    console.error(err);
-                });
-        }
+      function detecthistory() {
+        let country = document.getElementById("select-country").value;
+        // const datetime = new Date();
+        // let year = datetime.getFullYear();
+        // let month;
+        // let date;
+        // if ((datetime.getMonth() + 1) < 10) {
+        //     month = "0" + (datetime.getMonth() + 1);
+        // } else {
+        //     month = (datetime.getMonth() + 1);
+        // }
+        // if (datetime.getDate() < 10) {
+        //     date = "0" + datetime.getDate();
+        // } else {
+        //     date = datetime.getDate();
+        // }
+        // var fulldate = `${year}-${month}-${date}`
+        fetch(`https://covid-193.p.rapidapi.com/history?country=${country}`, {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key":
+              "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9",
+          },
+        })
+          .then((response) => response.json())
+          .then((response) => {
+            var datalabels = [];
+            var covidcases = [];
+            var arraydata = response.response.reverse();
+            var tempcategories = arraydata[0].day;
+            for (let i = 1; i < arraydata.length; i++) {
+              if (arraydata[i].day == arraydata[i - 1].day) {
+                datalabels.pop();
+                datalabels.push(arraydata[i].day);
+                covidcases.pop();
+                covidcases.push(arraydata[i].cases.total);
+              } else {
+                datalabels.push(arraydata[i].day);
+                covidcases.push(arraydata[i].cases.total);
+              }
+            }
+            document.getElementById("chart").innerHTML = "";
+            getgraphic("chart", country, datalabels, covidcases);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      }
 
-        function searchData() {
-            fetch("https://covid-193.p.rapidapi.com/countries", {
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-host": "covid-193.p.rapidapi.com",
-                        "x-rapidapi-key": "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9"
-                    }
-                })
-                .then(response =>
-                    response.json()
-                ).then(response =>
-                    response.response.forEach(element => {
-                        var selectform = document.getElementById("select-country");
-                        selectform.innerHTML += ` <option value="${element}"> ${element} </option>`;
-                    }))
-                .catch(err => {
-                    console.error(err);
-                });
-        }
+      function searchData() {
+        fetch("https://covid-193.p.rapidapi.com/countries", {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key":
+              "3e2981fc31msh31c09f2cb426574p19b6f6jsnd66d0d5153d9",
+          },
+        })
+          .then((response) => response.json())
+          .then((response) =>
+            response.response.forEach((element) => {
+              var selectform = document.getElementById("select-country");
+              selectform.innerHTML += ` <option value="${element}"> ${element} </option>`;
+            })
+          )
+          .catch((err) => {
+            console.error(err);
+          });
+      }
 
-        // function untuk menampilkan grafik
-        var getgraphic = function (iddom, country, dataLabels, data1) {
+      // function untuk menampilkan grafik
+      var getgraphic = function (iddom, country, dataLabels, data1) {
+        var options = {
+          series: [
+            {
+              name: "Total Covid cases",
+              data: data1,
+            },
+          ],
+          chart: {
+            type: "area",
+            height: 350,
+            zoom: {
+              enabled: false,
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          stroke: {
+            curve: "straight",
+          },
 
-            var options = {
-                series: [{
-                    name: "Total Covid cases",
-                    data: data1
-                }],
-                chart: {
-                    type: 'area',
-                    height: 350,
-                    zoom: {
-                        enabled: false
-                    }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                stroke: {
-                    curve: 'straight'
-                },
+          title: {
+            text: `Covid cases in ${country}`,
+            align: "left",
+          },
+          labels: dataLabels,
+          xaxis: {
+            type: "datetime",
+          },
+          yaxis: {
+            opposite: true,
+          },
+          legend: {
+            horizontalAlign: "left",
+          },
+        };
 
-                title: {
-                    text: `Covid cases in ${country}`,
-                    align: 'left'
-                },
-                labels: dataLabels,
-                xaxis: {
-                    type: 'datetime',
-                },
-                yaxis: {
-                    opposite: true
-                },
-                legend: {
-                    horizontalAlign: 'left'
-                }
-            };
-
-
-            var chart = new ApexCharts(document.getElementById(iddom), options);
-            chart.render();
-        }
+        var chart = new ApexCharts(document.getElementById(iddom), options);
+        chart.render();
+      };
     </script>
-</body>
-
+  </body>
 </html>

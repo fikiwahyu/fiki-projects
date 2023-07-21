@@ -1,70 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/square-logo.png">
-    <link rel="icon" type="image/png" href="/assets/square-logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/square-logo.png" />
+    <link rel="icon" type="image/png" href="/assets/square-logo.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-        name='viewport' />
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>NextDev Academy 2022</title>
-</head>
+  </head>
 
-<body class="pb-5" style="background-color: #f8f8f8;">
-    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb;">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                    <img class="fikipedia-logo" src="../assets/square-logo.png" alt="Logo Fikipedia">
-                </a>
+  <body class="pb-5" style="background-color: #f8f8f8">
+    <header class="p-3 mb-3 border-bottom" style="background-color: #ebebeb">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+          >
+            <img
+              class="fikipedia-logo"
+              src="../assets/square-logo.png"
+              alt="Logo Fikipedia"
+            />
+          </a>
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-bold">
-                    <li><a href="#" class="nav-link px-2 link-secondary">Dashboard</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Assignment
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="/assignment-1.html">assignment-1</a></li>
-                                <li><a class="dropdown-item" href="/assignment-2.html">assignment-2</a></li>
-                                <li><a class="dropdown-item" href="/assignment-3.html">assignment-3</a></li>
-                                <li><a class="dropdown-item" href="/final-project/index.html">Final Project</a></li>
-                            </ul>
-                        </div>
-                    </li>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-bold"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Dashboard</a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Assignment
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a class="dropdown-item" href="/assignment-1.html"
+                      >assignment-1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/assignment-2.html"
+                      >assignment-2</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/assignment-3.html"
+                      >assignment-3</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/final-project/index.html"
+                      >Final Project</a
+                    >
+                  </li>
                 </ul>
+              </div>
+            </li>
+          </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                </form>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
 
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg" alt="Hacktiv8"
-                            width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"
-                        style="background-attachment: fixed;">
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg"
+                alt="Hacktiv8"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small"
+              aria-labelledby="dropdownUser1"
+              style="background-attachment: fixed"
+            >
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </header>
     <!-- <div class="container my-3">
         <div class="d-flex justify-content-center">
@@ -75,122 +132,201 @@
         </div>
     </div> -->
     <div id="profile" class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row g-0">
-                                <div class="col-md-4 " style="background-color: #f39221;">
-                                    <img src="https://th.bing.com/th/id/OIP.Uq8GH0JaAWphhqshKlbZiQAAAA?pid=ImgDet&rs=1"
-                                        class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h1 class="card-title" id="p-name">Nama Anda</h1>
-                                        <p class="card-text" id="p-role">Role</p>
-                                        <div class="d-grid gap-2 d-md-block mt-5">
-                                            <a class="btn btn-outline-primary fw-bold" type="button"
-                                                data-bs-toggle="collapse" href="#form" role="button"
-                                                aria-expanded="false" aria-controls="form">Edit
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                                                    <path
-                                                        d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                                                    <path
-                                                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                                                </svg></a>
-                                            <a href="/assignment-3.html" target="_blank" rel="noopener noreferrer">
-                                                <button class="btn btn-outline-secondary fw-bold" type="button">Next
-                                                    Assignment <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor" class="bi bi-send-check"
-                                                        viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372l2.8-7Zm-2.54 1.183L5.93 9.363 1.591 6.602l11.833-4.733Z" />
-                                                        <path
-                                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z" />
-                                                    </svg></button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-container">
-                                <div class="group">
-                                    <span class="form-label">Availability</span>
-                                    <span class="form-value" id="p-availability">-</span>
-                                </div>
-                                <div class="group">
-                                    <span class="form-label">usia</span>
-                                    <span class="form-value" id="p-usia">-</span>
-                                </div>
-                                <div class="group">
-                                    <span class="form-label">Lokasi</span>
-                                    <span class="form-value" id="p-lokasi">-</span>
-                                </div>
-                                <div class="group">
-                                    <span class="form-label">Pengalaman</span>
-                                    <span class="form-value" id="p-pengalaman">-</span>
-                                </div>
-                                <div class="group">
-                                    <span class="form-label">Email</span>
-                                    <span class="form-value" id="p-email">-</span>
-                                </div>
-                            </div>
-                        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row g-0">
+                  <div class="col-md-4" style="background-color: #f39221">
+                    <img
+                      src="https://th.bing.com/th/id/OIP.Uq8GH0JaAWphhqshKlbZiQAAAA?pid=ImgDet&rs=1"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h1 class="card-title" id="p-name">Nama Anda</h1>
+                      <p class="card-text" id="p-role">Role</p>
+                      <div class="d-grid gap-2 d-md-block mt-5">
+                        <a
+                          class="btn btn-outline-primary fw-bold"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          href="#form"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="form"
+                          >Edit
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-journal-text"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"
+                            />
+                            <path
+                              d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"
+                            />
+                            <path
+                              d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"
+                            /></svg
+                        ></a>
+                        <a
+                          href="/assignment-3.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            class="btn btn-outline-secondary fw-bold"
+                            type="button"
+                          >
+                            Next Assignment
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-send-check"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372l2.8-7Zm-2.54 1.183L5.93 9.363 1.591 6.602l11.833-4.733Z"
+                              />
+                              <path
+                                d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                              />
+                            </svg>
+                          </button>
+                        </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-container">
+                  <div class="group">
+                    <span class="form-label">Availability</span>
+                    <span class="form-value" id="p-availability">-</span>
+                  </div>
+                  <div class="group">
+                    <span class="form-label">usia</span>
+                    <span class="form-value" id="p-usia">-</span>
+                  </div>
+                  <div class="group">
+                    <span class="form-label">Lokasi</span>
+                    <span class="form-value" id="p-lokasi">-</span>
+                  </div>
+                  <div class="group">
+                    <span class="form-label">Pengalaman</span>
+                    <span class="form-value" id="p-pengalaman">-</span>
+                  </div>
+                  <div class="group">
+                    <span class="form-label">Email</span>
+                    <span class="form-value" id="p-email">-</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div id="form" class="container collapse">
-        <div class="mb-1">
-            <label for="nama" class="form-label fw-bolder">Nama</label>
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" id="firstname" placeholder="firstname">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" id="lastname" placeholder="lastname">
-                </div>
-            </div>
+      <div class="mb-1">
+        <label for="nama" class="form-label fw-bolder">Nama</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              placeholder="firstname"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="lastname"
+              placeholder="lastname"
+            />
+          </div>
         </div>
-        <div class="mb-1">
-            <label for="role" class="form-label fw-bolder">Role</label>
-            <input type="text" class="form-control" id="role" placeholder="role">
-        </div>
-        <div class="mb-1">
-            <label for="availability" class="form-label fw-bolder">Availability</label>
-            <input type="text" class="form-control" id="availability" placeholder="availability">
-        </div>
-        <div class="mb-1">
-            <label for="usia" class="form-label fw-bolder">Usia</label>
-            <input type="number" class="form-control" id="usia" placeholder="usia">
-        </div>
-        <div class="mb-1">
-            <label for="lokasi" class="form-label fw-bolder">Lokasi</label>
-            <input type="text" class="form-control" id="lokasi" placeholder="lokasi">
-        </div>
-        <div class="mb-1">
-            <label for="pengalaman" class="form-label fw-bolder">Pengalaman</label>
-            <input type="text" class="form-control" id="pengalaman" placeholder="pengalaman kerja">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label fw-bolder">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
-        </div>
-        <div class="d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit" id="submitbtn" onclick="submitform()">Submit</button>
-        </div>
+      </div>
+      <div class="mb-1">
+        <label for="role" class="form-label fw-bolder">Role</label>
+        <input type="text" class="form-control" id="role" placeholder="role" />
+      </div>
+      <div class="mb-1">
+        <label for="availability" class="form-label fw-bolder"
+          >Availability</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="availability"
+          placeholder="availability"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="usia" class="form-label fw-bolder">Usia</label>
+        <input
+          type="number"
+          class="form-control"
+          id="usia"
+          placeholder="usia"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="lokasi" class="form-label fw-bolder">Lokasi</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lokasi"
+          placeholder="lokasi"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="pengalaman" class="form-label fw-bolder">Pengalaman</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pengalaman"
+          placeholder="pengalaman kerja"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label fw-bolder">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="d-flex justify-content-end">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          id="submitbtn"
+          onclick="submitform()"
+        >
+          Submit
+        </button>
+      </div>
     </div>
     <script src="/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
